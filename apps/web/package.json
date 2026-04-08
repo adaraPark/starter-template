@@ -16,6 +16,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "docs:check": "bash scripts/check-docs.sh",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "db:generate": "prisma migrate dev",

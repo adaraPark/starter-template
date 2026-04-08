@@ -61,4 +61,32 @@ export {
   DropdownMenuRadioGroup,
 } from "./dropdown-menu";
 
+export { Skeleton } from "./skeleton";
+export { Textarea } from "./textarea";
+export { Checkbox } from "./checkbox";
+export { Progress } from "./progress";
+export {
+  Sheet,
+  SheetPortal,
+  SheetOverlay,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+} from "./sheet";
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "./table";
+export { Alert, AlertTitle, AlertDescription, alertVariants } from "./alert";
+
 // [EXPORT_PRIMITIVE] -- Add new primitive exports above this line

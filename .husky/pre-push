@@ -3,4 +3,4 @@
 # Quality gate — blocks push if any check fails
 # No pre-commit hook: commit freely, quality gated at push time
 
-cd apps/web && bun run typecheck && bun run lint && bun run test:run
+cd apps/web && bun run typecheck && bun run lint && bun run test:run && bun run docs:check
