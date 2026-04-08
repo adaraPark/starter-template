@@ -88,5 +88,34 @@ export {
   TableCaption,
 } from "./table";
 export { Alert, AlertTitle, AlertDescription, alertVariants } from "./alert";
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./accordion";
+export { Avatar, AvatarImage, AvatarFallback } from "./avatar";
+export {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "./collapsible";
+export {
+  Command,
+  CommandDialog,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandShortcut,
+  CommandSeparator,
+} from "./command";
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverAnchor,
+} from "./popover";
 
 // [EXPORT_PRIMITIVE] -- Add new primitive exports above this line
