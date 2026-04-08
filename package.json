@@ -1,0 +1,14 @@
+{
+  "name": "starter-template",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "packageManager": "bun@1.1.0",
+  "scripts": {
+    "dev": "bun run --filter @starter/web dev",
+    "build": "bun run --filter @starter/web build",
+    "lint": "bun run --filter '*' lint",
+    "typecheck": "bun run --filter '*' typecheck",
+    "test:run": "bun run --filter '*' test:run",
+    "format": "bun run --filter '*' format"
+  }
+}
