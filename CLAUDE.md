@@ -41,6 +41,7 @@ starter-template/          (Bun workspace root)
 │       │   │   │       ├── core-concepts/        # Article page
 │       │   │   │       └── advanced-topics/      # Article page
 │       │   │   ├── _components/       # Page-specific components
+│       │   │   │   ├── layout/        # MarketingHeader, AppSidebar, AppHeader, navItems
 │       │   │   │   └── learn/         # LearnHub, LearnArticle, LearnBreadcrumb
 │       │   │   ├── api/
 │       │   │   │   └── trpc/[trpc]/   # tRPC HTTP handler
@@ -187,7 +188,7 @@ bun run db:migrate       # Deploy migrations (production)
 | `[ADD_PROCEDURE]` | `apps/web/src/server/api/trpc.ts` | Add new procedure types |
 | `[EXPORT_PRIMITIVE]` | `packages/ui/src/components/primitives/index.ts` | Export new primitives |
 | `[EXPORT_COMPONENT]` | `packages/ui/src/components/composed/index.ts` | Export new composed components |
-| `[ADD_NAV_ITEM]` | `apps/web/src/app/(app)/layout.tsx` | Add sidebar navigation items |
+| `[ADD_NAV_SECTION]` | `apps/web/src/app/_components/layout/navItems.ts` | Add new navigation sections |
 
 ## Adding New Features
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Rocket, Layers, Settings } from "lucide-react";
+import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@starter/ui/primitives";
 
 const iconMap = {
@@ -25,23 +26,30 @@ interface LearnHubProps {
 export function LearnHub({ topics }: LearnHubProps) {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {topics.map((topic) => {
+      {topics.map((topic, index) => {
         const Icon = iconMap[topic.icon];
         return (
-          <Link key={topic.slug} href={`/learn/${topic.slug}`} className="group">
-            <Card className="h-full transition-shadow duration-200 group-hover:shadow-lg">
-              <CardHeader>
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <CardTitle className="text-lg">{topic.title}</CardTitle>
-                <CardDescription>{topic.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <span className="text-xs text-muted-foreground">{topic.readTime}</span>
-              </CardContent>
-            </Card>
-          </Link>
+          <motion.div
+            key={topic.slug}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+          >
+            <Link href={`/learn/${topic.slug}`} className="group block">
+              <Card className="h-full transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-1">
+                <CardHeader>
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">{topic.title}</CardTitle>
+                  <CardDescription>{topic.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <span className="text-xs text-muted-foreground">{topic.readTime}</span>
+                </CardContent>
+              </Card>
+            </Link>
+          </motion.div>
         );
       })}
     </div>

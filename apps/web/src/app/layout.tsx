@@ -26,6 +26,15 @@ export const metadata: Metadata = {
   },
   description:
     "A production-ready monorepo with Next.js 15, tRPC, Prisma, and a shared design system.",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Starter Template",
+    description:
+      "A production-ready monorepo with everything you need to ship fast.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

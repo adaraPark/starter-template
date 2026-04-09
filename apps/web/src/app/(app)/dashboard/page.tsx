@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Activity, Users, Package, TrendingUp } from "lucide-react";
 import { StatCard, MiniProgressBar } from "@starter/ui/composed";
+import { ToastDemo } from "~/app/_components/dashboard/ToastDemo";
+import { ActivityChart } from "~/app/_components/dashboard/ActivityChart";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -80,6 +82,21 @@ export default function DashboardPage() {
             <MiniProgressBar value={0} color="warning" />
           </div>
         </div>
+      </div>
+
+      {/* Activity chart */}
+      <div className="mt-8 rounded-xl border border-border bg-card p-6">
+        <h2 className="mb-4 text-lg font-semibold text-card-foreground">Weekly Activity</h2>
+        <ActivityChart />
+      </div>
+
+      {/* Toast demo */}
+      <div className="mt-8 rounded-xl border border-border bg-card p-6">
+        <h2 className="mb-4 text-lg font-semibold text-card-foreground">Notifications</h2>
+        <p className="mb-4 text-sm text-muted-foreground">
+          Toast notifications powered by Sonner.
+        </p>
+        <ToastDemo />
       </div>
     </div>
   );
